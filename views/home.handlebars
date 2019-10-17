@@ -1,0 +1,40 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center">CNN Live L<i class="fas fa-check-circle"></i>nger Page Scraper</h1>
+    <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+  </div>
+</div>
+
+<!-- articles -->
+<div class="container">
+  <div class="col-md-12">
+    {{#if article}}
+    {{#each article}}
+
+    <div class="alert alert-primary" role="alert">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>{{this.title}}</h4>
+      </div>
+      <div class="panel-body">
+        <p> {{this.summary}}</p>
+        <a href=
+        {{this.link}} target="_blank">{{this.link}}</a>
+        <br><br>
+        <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
+      </div>
+    </div>
+
+   </div>
+
+    {{/each}}
+    {{else}}
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>Uh Oh. Looks like we don't have any new articles.</h4>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>

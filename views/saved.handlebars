@@ -1,0 +1,46 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center">Saved Live L<i class="fas fa-check-circle"></i>nger Articles From CNN </h1>
+    <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+  </div>
+</div>
+
+<!-- articles -->
+<div class="container">
+  <div class="col-md-12">
+    {{#if article}}
+    {{#each article}}
+
+<div class="alert alert-success" role="alert">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4>{{this.title}}</h4>
+      </div>
+      <div class="panel-body">
+        <p> {{this.summary}}</p>
+        <a href={{this.link}} target="_blank">Click here</a>
+        <br><br>
+        <button type="button" class="btn btn-success addNote" data-toggle="modal" data-target="#noteModal{{this._id}}"
+          data-id={{this._id}}>Add a Note</button>
+        <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+      </div>
+    </div>
+
+</div>
+    
+    {{/each}}
+    {{else}}
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>You have no saved articles.</h4>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</div>
+
+<!--Clicked Notes Modal-->
+{{#each article}}
+{{> notes-modal }}
+{{/each}}

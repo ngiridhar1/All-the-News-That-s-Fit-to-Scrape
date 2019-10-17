@@ -1,0 +1,45 @@
+#alinav{
+  margin-left: 60%;
+}
+
+
+
+.jumbotron-fluid{
+
+  background-image: url(./image/images.jpg)
+}
+.text-center{
+  font-family: serif;
+} 
+body{
+ 
+  background-image: url(./image/Blue.jpg)
+}
+
+#footerModal{
+  background-color: brown;
+  
+}
+#footerHeader{
+  background-color: brown;
+  color: aliceblue;
+}
+
+#footerBody{
+  background-color: antiquewhite;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: large;
+}
+#notehead{
+  background-image: url("./image/wallpaper-sky-blue-background-13.jpg");
+}
+#notebody{
+  background-image: url("./image/missing_modalBody.jpg");
+}
+#notefooter{
+  background-image: url("./image/wallpaper-sky-blue-background-13.jpg");
+}
+.modal-title{
+  font-family: serif;
+}
